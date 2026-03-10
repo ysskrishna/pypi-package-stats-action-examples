@@ -1,0 +1,19 @@
+name: Check Download Threshold
+on: workflow_dispatch
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ysskrishna/pypi-package-stats-action@v1
+        id: stats
+        with:
+          package-name: 'requests'
+
+      - name: Check download threshold
+        env:
+          DL_MONTH: ${{ steps.stats.outputs.last-month-downloads }}
+        run: |
+          if [ "$DL_MONTH" -lt 1000 ]; then
+            echo "::warning::Monthly downloads ($DL_MONTH) are below 1000"
+          fi

@@ -1,0 +1,14 @@
+name: Custom Output Path
+on: workflow_dispatch
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ysskrishna/pypi-package-stats-action@v1
+        with:
+          package-name: 'numpy'
+          output-path: 'output/numpy-stats.json'
+
+      - name: Read stats file
+        run: cat output/numpy-stats.json | python3 -m json.tool

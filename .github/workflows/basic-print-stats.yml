@@ -1,0 +1,24 @@
+name: Basic - Print Download Stats
+on: workflow_dispatch
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ysskrishna/pypi-package-stats-action@v1
+        id: stats
+        with:
+          package-name: 'requests'
+
+      - name: Print stats
+        env:
+          PKG_NAME: ${{ steps.stats.outputs.name }}
+          PKG_VERSION: ${{ steps.stats.outputs.version }}
+          DL_DAY: ${{ steps.stats.outputs.last-day-downloads }}
+          DL_WEEK: ${{ steps.stats.outputs.last-week-downloads }}
+          DL_MONTH: ${{ steps.stats.outputs.last-month-downloads }}
+        run: |
+          echo "Package: $PKG_NAME v$PKG_VERSION"
+          echo "Downloads (day):   $DL_DAY"
+          echo "Downloads (week):  $DL_WEEK"
+          echo "Downloads (month): $DL_MONTH"
