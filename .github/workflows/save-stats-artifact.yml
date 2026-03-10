@@ -7,10 +7,10 @@ jobs:
     steps:
       - uses: ysskrishna/pypi-package-stats-action@v1
         with:
-          package-name: 'flask'
-          output-path: 'reports/flask-stats.json'
+          package-name: 'nestedutils'
+          output-path: 'reports/nestedutils-stats.json'
 
       - uses: actions/upload-artifact@v4
         with:
           name: package-stats
-          path: reports/flask-stats.json
+          path: reports/nestedutils-stats.json

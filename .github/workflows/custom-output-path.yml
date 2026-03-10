@@ -7,8 +7,8 @@ jobs:
     steps:
       - uses: ysskrishna/pypi-package-stats-action@v1
         with:
-          package-name: 'numpy'
-          output-path: 'output/numpy-stats.json'
+          package-name: 'video-extensions'
+          output-path: 'output/video-extensions-stats.json'
 
       - name: Read stats file
-        run: cat output/numpy-stats.json | python3 -m json.tool
+        run: cat output/video-extensions-stats.json | python3 -m json.tool

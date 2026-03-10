@@ -8,7 +8,7 @@ jobs:
       - uses: ysskrishna/pypi-package-stats-action@v1
         id: stats
         with:
-          package-name: 'requests'
+          package-name: 'container-detect'
 
       - name: Check download threshold
         env:
