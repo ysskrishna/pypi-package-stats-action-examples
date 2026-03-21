@@ -7,7 +7,7 @@
 
 
 
-This repository contains practical GitHub Actions workflow examples for [`ysskrishna/pypi-package-stats-action`](https://github.com/ysskrishna/pypi-package-stats-action).
+Ready-to-use GitHub Actions workflows for integrating [`ysskrishna/pypi-package-stats-action`](https://github.com/ysskrishna/pypi-package-stats-action) into CI pipelines.
 
 
 ## Quick Start
