@@ -1,0 +1,44 @@
+name: Run All Examples
+on: workflow_dispatch
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  trigger-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger all example workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          echo "🚀 Triggering all example workflows..."
+
+          workflows=(
+            "basic-print-stats.yml"
+            "custom-output-path.yml"
+            "save-stats-artifact.yml"
+            "check-download-threshold.yml"
+          )
+
+          for workflow in "${workflows[@]}"; do
+            echo "📋 Triggering: $workflow"
+            gh workflow run "$workflow" \
+              --repo ${{ github.repository }} \
+              --ref ${{ github.ref_name }}
+
+            sleep 1
+          done
+
+          echo ""
+          echo "✅ All workflows triggered successfully!"
+          echo ""
+          echo "🔗 View workflow runs:"
+          echo "   https://github.com/${{ github.repository }}/actions"
+
+      - name: Summary
+        run: |
+          echo "### 🎯 Triggered All Example Workflows" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 [View all workflow runs](https://github.com/${{ github.repository }}/actions)" >> $GITHUB_STEP_SUMMARY

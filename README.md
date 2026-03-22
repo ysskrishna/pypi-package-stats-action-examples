@@ -83,7 +83,15 @@ The `stats-json` output and the file written to `output-path` contain the follow
 }
 ```
 
-## Usage Examples
+## Example workflows
+
+### Master workflow
+
+| Workflow | Description |
+|----------|-------------|
+| [**🚀 Run All Examples**](.github/workflows/run-all-examples.yml) | Trigger all four example workflows at once from the Actions tab |
+
+### Individual examples
 
 | Example | Description |
 |---------|-------------|
@@ -91,6 +99,7 @@ The `stats-json` output and the file written to `output-path` contain the follow
 | [Check Download Threshold](https://github.com/ysskrishna/pypi-package-stats-action-examples/blob/main/.github/workflows/check-download-threshold.yml) | Warn if monthly downloads fall below a threshold |
 | [Custom Output Path](https://github.com/ysskrishna/pypi-package-stats-action-examples/blob/main/.github/workflows/custom-output-path.yml) | Write stats JSON to a custom file path |
 | [Save Stats as Artifact](https://github.com/ysskrishna/pypi-package-stats-action-examples/blob/main/.github/workflows/save-stats-artifact.yml) | Save stats as a downloadable GitHub Actions artifact |
+
 
 
 ## License
