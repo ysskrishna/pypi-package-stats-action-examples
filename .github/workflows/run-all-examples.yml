@@ -2,11 +2,13 @@ name: Run All Examples
 on: workflow_dispatch
 
 permissions:
-  actions: write
   contents: read
 
 jobs:
   trigger-all:
+    permissions:
+      actions: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - name: Trigger all example workflows
@@ -25,8 +27,8 @@ jobs:
           for workflow in "${workflows[@]}"; do
             echo "📋 Triggering: $workflow"
             gh workflow run "$workflow" \
-              --repo ${{ github.repository }} \
-              --ref ${{ github.ref_name }}
+              --repo ${GITHUB_REPOSITORY} \
+              --ref ${GITHUB_REF_NAME}
 
             sleep 1
           done
@@ -35,10 +37,10 @@ jobs:
           echo "✅ All workflows triggered successfully!"
           echo ""
           echo "🔗 View workflow runs:"
-          echo "   https://github.com/${{ github.repository }}/actions"
+          echo "   https://github.com/${GITHUB_REPOSITORY}/actions"
 
       - name: Summary
         run: |
           echo "### 🎯 Triggered All Example Workflows" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🔗 [View all workflow runs](https://github.com/${{ github.repository }}/actions)" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 [View all workflow runs](https://github.com/${GITHUB_REPOSITORY}/actions)" >> $GITHUB_STEP_SUMMARY
