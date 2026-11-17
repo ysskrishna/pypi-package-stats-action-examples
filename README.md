@@ -4,7 +4,7 @@
 [![pypi-package-stats GitHub Action](https://img.shields.io/badge/GitHub-pypi--package--stats--action-blue.svg)](https://github.com/ysskrishna/pypi-package-stats-action)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![pypi-package-stats Documentation](https://img.shields.io/badge/docs-ysskrishna.github.io%2Fpypi--package--stats-blue.svg)](https://ysskrishna.github.io/pypi-package-stats/)
-
+[![Author site](https://img.shields.io/badge/author-ysskrishna.space-informational)](https://ysskrishna.space)
 
 
 Ready-to-use GitHub Actions workflows for integrating [`ysskrishna/pypi-package-stats-action`](https://github.com/ysskrishna/pypi-package-stats-action) into CI pipelines.
@@ -101,21 +101,39 @@ The `stats-json` output and the file written to `output-path` contain the follow
 | [Save Stats as Artifact](https://github.com/ysskrishna/pypi-package-stats-action-examples/blob/main/.github/workflows/save-stats-artifact.yml) | Save stats as a downloadable GitHub Actions artifact |
 
 
+## Credits
+
+Examples for [pypi-package-stats-action](https://github.com/ysskrishna/pypi-package-stats-action). Built on [pypi-package-stats](https://github.com/ysskrishna/pypi-package-stats).
+
+## Built and maintained by
+
+PyPI Package Stats examples is built and maintained by:
+
+| | Name | GitHub | Role |
+|---|------|--------|------|
+| <img src="https://github.com/ysskrishna.png?size=120" width="60" height="60" alt="Y. Siva Sai Krishna"> | **Y. Siva Sai Krishna** | [@ysskrishna](https://github.com/ysskrishna) | Creator |
+
+## Support
+
+If you find this project helpful:
+
+- ⭐ Star the repository
+- 🐛 [Report issues](https://github.com/ysskrishna/pypi-package-stats-action-examples/issues)
+- 🔀 Submit pull requests
+- 💝 [Sponsor on GitHub](https://github.com/sponsors/ysskrishna)
 
 ## License
 
 MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LICENSE) for details.
-
-## Credits
-
-Examples for [pypi-package-stats-action](https://github.com/ysskrishna/pypi-package-stats-action). Built on [pypi-package-stats](https://github.com/ysskrishna/pypi-package-stats).
 
 ---
 
 <p align="left">
   <a href="https://github.com/ysskrishna">Author's GitHub</a> •
   <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
+  <a href="https://ysskrishna.space">Author's site</a> •
   <a href="https://github.com/marketplace/actions/pypi-package-stats">GitHub Marketplace</a> •
   <a href="https://github.com/ysskrishna/pypi-package-stats-action">pypi-package-stats-action</a> •
-  <a href="https://github.com/ysskrishna/pypi-package-stats">pypi-package-stats Documentation</a>
+  <a href="https://github.com/ysskrishna/pypi-package-stats">pypi-package-stats Documentation</a> •
+  <a href="https://github.com/ysskrishna/pypi-package-stats-action-examples/issues">Report Issues</a>
 </p>
