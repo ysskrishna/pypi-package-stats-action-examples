@@ -1,6 +1,9 @@
 name: Save Stats as Artifact
 on: workflow_dispatch
 
+permissions:
+  contents: read
+
 jobs:
   stats:
     runs-on: ubuntu-latest
@@ -10,7 +13,7 @@ jobs:
           package-name: 'nestedutils'
           output-path: 'reports/nestedutils-stats.json'
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: package-stats
           path: reports/nestedutils-stats.json

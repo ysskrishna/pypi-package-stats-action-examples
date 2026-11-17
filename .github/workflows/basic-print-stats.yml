@@ -1,6 +1,9 @@
 name: Basic - Print Download Stats
 on: workflow_dispatch
 
+permissions:
+  contents: read
+
 jobs:
   stats:
     runs-on: ubuntu-latest

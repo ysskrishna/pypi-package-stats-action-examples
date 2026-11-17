@@ -1,6 +1,9 @@
 name: Custom Output Path
 on: workflow_dispatch
 
+permissions:
+  contents: read
+
 jobs:
   stats:
     runs-on: ubuntu-latest
